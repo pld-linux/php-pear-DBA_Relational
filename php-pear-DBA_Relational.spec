@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          DBA
-%define         _subclass       Relational
+%define		_class		DBA
+%define		_subclass	Relational
 %define		_status		devel
 %define		_pearname	%{_class}_%{_subclass}
 
