@@ -9,6 +9,7 @@ Version:	0.19
 Release:	3
 License:	LGPL
 Group:		Development/Languages/PHP
+# Source0-md5:	eab476d233ca303e6e13e3a01c221d59
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
