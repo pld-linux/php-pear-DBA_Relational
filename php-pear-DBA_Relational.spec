@@ -8,7 +8,7 @@ Summary:	%{_pearname} - Berkeley-style database abstraction class
 Summary(pl):	%{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
 Name:		php-pear-%{_pearname}
 Version:	0.19
-Release:	4.1
+Release:	4.2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -18,6 +18,9 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# included in tests package
+%define		_noautoreq 'pear(empSchema.php)' 'pear(hatSchema.php)'
 
 %description
 Table management extension for DBA.
