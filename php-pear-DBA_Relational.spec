@@ -15,7 +15,9 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	eab476d233ca303e6e13e3a01c221d59
 URL:		http://pear.php.net/package/DBA_Relational/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:4.0.4pl1
 Requires:	php-pear
+Requires:	php-pear-DBA
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
