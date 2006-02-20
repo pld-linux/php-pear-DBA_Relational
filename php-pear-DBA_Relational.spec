@@ -33,7 +33,7 @@ Rozszerzenie klasy DBA do zarz±dzania tabelami.
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl):	Testy dla PEAR::%{_pearname}
-Group:		Development
+Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
 
