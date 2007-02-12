@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Berkeley-style database abstraction class
-Summary(pl):	%{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
+Summary(pl.UTF-8):   %{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
 Name:		php-pear-%{_pearname}
 Version:	0.19
 Release:	6
@@ -29,12 +29,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Table management extension for DBA.
 
-%description -l pl
-Rozszerzenie klasy DBA do zarz±dzania tabelami.
+%description -l pl.UTF-8
+Rozszerzenie klasy DBA do zarzÄ…dzania tabelami.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
@@ -43,7 +43,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
