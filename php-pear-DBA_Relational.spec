@@ -8,7 +8,7 @@ Summary:	%{_pearname} - Berkeley-style database abstraction class
 Summary(pl.UTF-8):	%{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
 Name:		php-pear-%{_pearname}
 Version:	0.19
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
