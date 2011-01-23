@@ -20,6 +20,7 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.0.4-0.pl1
 Requires:	php-pear
 Requires:	php-pear-DBA
+Obsoletes:	php-pear-DBA_Relational-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,20 +32,6 @@ Table management extension for DBA.
 
 %description -l pl.UTF-8
 Rozszerzenie klasy DBA do zarządzania tabelami.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -63,7 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
