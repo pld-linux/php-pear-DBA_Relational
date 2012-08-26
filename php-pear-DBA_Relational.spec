@@ -1,14 +1,11 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		DBA
-%define		_subclass	Relational
 %define		_status		devel
-%define		_pearname	%{_class}_%{_subclass}
-
+%define		_pearname	DBA_Relational
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Berkeley-style database abstraction class
 Summary(pl.UTF-8):	%{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
 Name:		php-pear-%{_pearname}
 Version:	0.19
-Release:	9
+Release:	10
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -17,7 +14,7 @@ URL:		http://pear.php.net/package/DBA_Relational/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-common >= 3:4.0.4-0.pl1
+Requires:	php(core) >= 4.0.4-0.pl1
 Requires:	php-pear
 Requires:	php-pear-DBA
 Obsoletes:	php-pear-DBA_Relational-tests
@@ -25,7 +22,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # included in tests package
-%define		_noautoreq 'pear(empSchema.php)' 'pear(hatSchema.php)'
+%define		_noautoreq pear(empSchema.php) pear(hatSchema.php)
 
 %description
 Table management extension for DBA.
@@ -49,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/DBA/*.php
