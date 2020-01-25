@@ -1,6 +1,5 @@
 %define		_status		devel
 %define		_pearname	DBA_Relational
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - Berkeley-style database abstraction class
 Summary(pl.UTF-8):	%{_pearname} - abstrakcyjna klasa w stylu bazy danych Berkeley
 Name:		php-pear-%{_pearname}
